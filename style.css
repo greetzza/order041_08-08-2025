@@ -1,0 +1,126 @@
+ body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            transition: background-color 0.5s;
+        }
+        
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        
+        .envelope {
+            width: 300px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .envelope:hover {
+            transform: translateX(-50%) scale(1.05);
+        }
+        
+        .letter-paper {
+            /* display: none;
+            background-image: url('gambar/bg1.jpg');
+            background-size: 100%;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            border: 1px solid #e0d6b8;
+            z-index: 0;
+            transform: translateY(100px);
+            opacity: 0;
+            animation: paperAppear 1s forwards; */
+
+            
+            background-image: url('gambar/bg1.jpeg');
+            background-size: 100%;
+            display: none;
+            background-color: #fff9e6;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+            border: 1px solid #e0d6b8;
+            animation: paperAppear 1s forwards;
+        }
+        
+        .letter-content {
+            text-align: left;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .letter-content h1 {
+            color: #d23669;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .signature {
+            text-align: right;
+            font-style: italic;
+            margin-top: 30px;
+        }
+        
+        .music-control {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: rgba(255,255,255,0.7);
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        @keyframes paperAppear {
+            from { 
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes envelopeOpen {
+            0% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(30px);
+            }
+            100% {
+                transform: translateX(-50%) translateY(30px);
+                opacity: 0;
+            }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #f00;
+            opacity: 0;
+        }
